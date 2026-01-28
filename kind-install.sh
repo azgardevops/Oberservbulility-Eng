@@ -15,6 +15,7 @@ if ! command -v docker &>/dev/null; then
 
   echo "👤 Adding current user to docker group..."
   sudo usermod -aG docker "$USER"
+  sudo newgrp docker
 
   echo "✅ Docker installed and user added to docker group."
 else
